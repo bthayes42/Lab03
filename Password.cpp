@@ -17,7 +17,8 @@ Password::Password()
 
 Password::~Password()
 {
-	all_words->removeAll();	//calls 'removeAll()' fctn from ListArray.h JC 2.2.17
+	//call removeAll func to delete contents of arrays
+	all_words->removeAll();	//JC 2.2.17
 	viable_words->removeAll();	//JC 2.2.17
 	
 	//calls destructor from ListArray class
@@ -30,7 +31,9 @@ Password::~Password()
 
 void Password::addWord(String* word)
 {
-	all_words->add(word);	//calls 'add()' fctn from ListArray.h JC 2.2.17
+	//populates both arrays with original list of words
+	all_words->add(word);	//JC 2.2.17
+	viable_words->add(word);	//JC 2.2.17
 }
 
 void Password::guess(int try_password, int num_matches)
@@ -45,7 +48,12 @@ int Password::getNumberOfPasswordsLeft()
 
 void Password::displayViableWords()
 {
+	int sz = viable_words->size();	//get current size of array JC 2.2.17
 	
+	for (int i = 0; i < sz; i++)	//cycle through array and print contents JC 2.2.17
+	{
+		cout << endl << viable_words[i];
+	}
 }
 
 String* getOriginalWord(int index)

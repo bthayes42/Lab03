@@ -4,16 +4,40 @@ using CSC2110::ListArrayIterator;
 #include <iostream>
 using namespace std;
 
+PPassword()
+{
+	
+}
 
+~Password()
+{
+	
+}
 
+void addWord(String* word)
+{
+	
+}
 
+void guess(int try_password, int num_matches)
+{
+	
+}
 
+int getNumberOfPasswordsLeft()
+{
+	
+}
 
+void displayViableWords()
+{
+	
+}
 
-
-
-
-
+String* getOriginalWord(int index)
+{
+	
+}
 
 int Password::bestGuess()
 {

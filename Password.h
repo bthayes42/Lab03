@@ -1,6 +1,11 @@
 #if !defined PASSWORD_H
 #define PASSWORD_H
 
+#include "Keyboard.h"
+#include "ReadFile.h"
+#include "WriteFile.h"
+#include "Text.h"
+
 //complete the includes
 
 class Password

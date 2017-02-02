@@ -11,6 +11,13 @@ Password::Password()
 	
 }
 
+~Password()
+{
+	
+}
+	
+}
+
 Password::~Password()
 {
 	

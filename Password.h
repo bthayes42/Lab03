@@ -19,8 +19,14 @@ class Password
       int getNumMatches(String* curr_word, String* word_guess);
 
    public:
-
-
+		Password(); //constructor
+		~Password(); // destructor
+		void addWord(String* word);
+		void guess(int try_password, int num_matches);
+		int getNumberOfPasswordsLeft();
+		void displayViableWords();
+		int bestGuess();
+		String* getOriginalWord(int index);
 };
 
 #endif

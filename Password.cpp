@@ -8,24 +8,29 @@ using namespace std;
 
 Password::Password()
 {
-	
-}
-
-~Password()
-{
-	
-}
-	
+	ListArray<String>* all_words = new ListArray;
+	ListArray<String>* viable_words = new ListArray;
+	//uses constructor from ListArray class to initialize pointers
+	all_words->ListArray();	//JC 2.2.17
+	viable_words->ListArray();	//JC 2.2.17
 }
 
 Password::~Password()
 {
+	all_words->removeAll();	//calls 'removeAll()' fctn from ListArray.h JC 2.2.17
+	viable_words->removeAll();	//JC 2.2.17
 	
+	//calls destructor from ListArray class
+	all_words->~ListArray();	//JC 2.2.17
+	viable_words->~ListArray();		//JC2.2.17
+	
+	delete all_words;	//JC 2.2.17
+	delete viable_words;	//JC 2.2.17
 }
 
 void Password::addWord(String* word)
 {
-	
+	all_words->add(word);	//calls 'add()' fctn from ListArray.h JC 2.2.17
 }
 
 void Password::guess(int try_password, int num_matches)

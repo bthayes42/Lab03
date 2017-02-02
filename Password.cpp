@@ -1,10 +1,12 @@
 #include "Password.h"
 using CSC2110::ListArrayIterator;
 
+
+
 #include <iostream>
 using namespace std;
 
-PPassword()
+Password::Password()
 {
 	
 }
@@ -13,23 +15,30 @@ PPassword()
 {
 	
 }
+	
+}
 
-void addWord(String* word)
+Password::~Password()
 {
 	
 }
 
-void guess(int try_password, int num_matches)
+void Password::addWord(String* word)
 {
 	
 }
 
-int getNumberOfPasswordsLeft()
+void Password::guess(int try_password, int num_matches)
 {
 	
 }
 
-void displayViableWords()
+int Password::getNumberOfPasswordsLeft()
+{
+	
+}
+
+void Password::displayViableWords()
 {
 	
 }

@@ -38,12 +38,27 @@ void Password::addWord(String* word)
 
 void Password::guess(int try_password, int num_matches)
 {
+	String* word = getOriginalWord(try_password);
+	ListArray<String>* temp = new ListArray;
+	int sz = viable_words->size();	
 	
+	for (int i = 0; i < sz; i++)	
+	{
+		
+		if (word.compare(viable_words[i]) <= num_matches)
+		{
+			temp->add(viable_words[i]);
+		}
+	}
+	
+	viable_word = temp;
 }
 
 int Password::getNumberOfPasswordsLeft()
 {
+	int num = viable_words->size();	//Finds number of possible passwords and returns int
 	
+	return num;
 }
 
 void Password::displayViableWords()

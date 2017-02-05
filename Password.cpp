@@ -56,9 +56,11 @@ void Password::displayViableWords()
 	}
 }
 
-String* getOriginalWord(int index)
+String* Password::getOriginalWord(int index)	//JC 2.2.17
 {
+	String* original_word = all_words->get(index);
 	
+	return original_word;
 }
 
 int Password::bestGuess()
